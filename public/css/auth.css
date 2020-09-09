@@ -1,0 +1,11 @@
+.container {
+    margin: 10% auto 0 auto;
+    border: solid rgb(199, 199, 199) 2px;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.mw-header {
+    text-align: center;
+    margin: 30px 0;
+}

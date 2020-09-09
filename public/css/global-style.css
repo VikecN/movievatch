@@ -1,0 +1,9 @@
+body {
+    text-align: center;
+    background-color: #f6f4e6;
+}
+
+.alert p {
+    display: inline-block;
+    margin: 0;
+}

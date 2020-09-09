@@ -1,0 +1,21 @@
+<%- contentFor('pageName') %>
+<title>Login</title> 
+
+<%- contentFor('styles') %>
+<link rel="stylesheet" type="text/css" href="/css/auth.css"> 
+
+<%- contentFor('body') %>
+<div class="container col-lg-3 col-md-6 col-sm-12">
+    <h1 class="mw-header">MovieWatch</h1>
+    <%- include('../partials/messages') %> 
+    <form class="form-group" action="/users/login" method="post">
+        <label for="email">Eamil</label><br>
+        <input type="email" class="form-control" name="email" id="email" value=""><br>
+
+        <label for="password">Password</label><br>
+        <input type="password" class="form-control" name="password" id="password" value=""><br>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+    <h4>Don't have account ? <a href="/users/register">Register</a></h4>
+</div>

@@ -1,0 +1,39 @@
+<%- contentFor('pageName') %>
+<title><%= movie.Title %> </title>
+
+<%- contentFor('styles') %>
+
+
+<%- contentFor('body') %>
+<div class="header">
+    <%- include('./header') %>
+</div>
+<div class="constainer">
+    <%- include('../partials/messages') %>
+</div>
+<h1><%- movie.Title %></h1>
+<img src="<%= movie.Poster %>" alt="Poster">
+
+<% if(movie.WatchedStatus) {%>
+<form action="/movie/delete" method="POST">
+    <button type="submit" class="btn btn-danger" name="id" value="<%- movie.imdbID %>">Delete</button>
+</form>
+<% } else { %>
+<form action="/movie/save" method="post">
+    <button type="submit" class="btn btn-success">Add Movie</button>
+</form>
+<% } %>
+<hr>
+<h2>Year: <%= movie.Year %></h2>
+<h4>Plot: <%= movie.Plot %> </h4>
+<h4>Rated: <%= movie.Rated %></h4>
+<h4>Runtime: <%= movie.Runtime %>min</h4>
+<h4>Genre: <%= movie.Genre %></h4>
+<h4>Director: <%= movie.Director %></h4>
+<h4>Writer: <%= movie.Writer %></h4>
+<h4>Actors: <%= movie.Actors %></h4>
+<h4>imdbID: <%= movie.imdbID %> </h4>
+<h4>Production: <%= movie.Production %> </h4>
+<% if(movie.Watched) { %> 
+    <h4>Watched on Date: <%= movie.Watched %> </h4>
+<% } %> 

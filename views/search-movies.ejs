@@ -1,0 +1,15 @@
+<% if(typeof movies != undefined) { %>
+    <div class="container-fluid ">
+        <div class="row">
+            <% movies.forEach(movie => { %>
+            <a href="/movie/id/<%- movie.imdbID %> ">
+                <div class="movie" id='<%= movie.imdbID %> '>
+                    <h3><%= movie.Title %></h3>
+                    <p>Year: <%= movie.Year %> </p>
+                    <img src="<%= movie.Poster %>" alt="Movie Poster - <%= movie.Title %>" class="movie-poster">
+                </div>
+            </a>
+            <% }) %>
+            <% } %>
+        </div>
+    </div>

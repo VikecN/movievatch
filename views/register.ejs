@@ -1,0 +1,30 @@
+<%- contentFor('pageName') %>
+<title>Register</title> 
+
+<%- contentFor('styles') %> 
+<link rel="stylesheet" type="text/css" href="/css/auth.css">
+
+<%- contentFor('body') %> 
+<div class="container col-lg-3 col-md-6 col-sm-12">
+    <h1 class="mw-header">MovieWatch</h1>
+    <%- include ('../partials/messages') %> 
+    <form class="form-group" action="/users/register" method="post">
+        <label for="first-name">First Name</label><br>
+        <input type="text" class="form-control" name="firstName" id="first-name"><br>
+        
+        <label for="last-name">Last Name</label><br>
+        <input type="text" class="form-control" name="lastName" id="last-name"><br>
+        
+        <label for="email">Email</label><br>
+        <input type="email" class="form-control" name="email" id="email"><br>
+        
+        <label for="password">Password</label><br>
+        <input type="password" class="form-control" name="password" id="password"><br>
+        
+        <label for="password2">Re-Password</label><br>
+        <input type="password" class="form-control" name="password2" id="password2"><br>
+        
+        <button type="submit" class="btn btn-primary">Register</button>
+    </form>
+    <h3>Have an account ? <a href="/users/login">Login</a></h3>
+</div>
